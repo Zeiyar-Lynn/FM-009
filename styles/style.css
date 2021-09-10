@@ -8,7 +8,9 @@
 main {
   min-height: 100vh;
   height: -webkit-fill-available;
-  background-color: #0c122c;
+  background-position: bottom;
+  background: #0c122c url(../images/bg-mobile.png) no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,6 +153,8 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    background: #0c122c url(../images/bg-desktop.png) no-repeat bottom;
+    background-size: contain;
   }
   .wrapper {
     -webkit-box-orient: horizontal;
@@ -176,9 +180,21 @@ main {
     left: initial;
     top: 0;
     right: 2rem;
-    -webkit-transform: translate(0%, -65%);
-            transform: translate(0%, -65%);
+    -webkit-transform: translate(0%, -70%);
+            transform: translate(0%, -70%);
     /* 0-0- */
+    border-bottom-right-radius: initial;
+  }
+  .storage .outcast::after {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    right: 0;
+    bottom: -19px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+    background-color: #fff;
   }
 }
 /*# sourceMappingURL=style.css.map */
