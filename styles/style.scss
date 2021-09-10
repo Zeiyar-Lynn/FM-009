@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+    height: -webkit-fill-available;
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.wrapper {
+    width: 80%;
+    flex-direction: column;
+}
+
+.about {
+    background-color: hsl(228, 56%, 26%);
+    width: 100%; /* not needed */
+    max-width: 19rem;
+    padding: 1.8rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border-top-right-radius: 5rem;
+
+    .logo {
+        height: 2rem;
+        margin-bottom: 2.3rem;
+        // outline: 1px solid red;
+
+        .img {
+            height: 100%;
+        }
+    }
+
+    .icons {
+        // outline: 1px solid red;
+        
+        .icon {
+            background-color: hsl(229, 57%, 11%);
+            border-radius: .5rem;
+            margin-right: 1rem;
+            padding: .6rem;
+            // outline: 1px solid red;
+        
+            img {
+                width: 1.2rem;
+                vertical-align: middle;/* for some reasons, it is working */
+            }    
+        }
+    }
+}
+
+.storage {
+    width: 100%; /* can ditched */
+    box-sizing: border-box;
+    padding: 2rem 2rem 2.5rem;
+    border-radius: .5rem;
+    position: relative;
+    color: hsl(243, 100%, 93%);
+    font-family: 'raleway', sans-serif;
+    background-color: hsl(228, 56%, 26%);
+
+    > p, .text{
+        font-size: .7rem;
+        text-align: center;
+    }
+
+
+    .bar-container {
+        height: 1rem;
+        background-color: hsl(229, 57%, 11%);
+        margin-block: 1rem .5rem;
+        padding: 2px;
+        border-radius: .5rem;
+        
+        .bar {
+            background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+            height: 100%;
+            width: 80%;
+            border-radius: inherit;
+            padding: .5px;
+            padding-right: 2px;
+        }
+
+        .circle {
+            width: .6rem;
+            height: .6rem;
+            border-radius: 50%;
+            margin-left: auto;
+            background-color: #fff;
+        }
+    }
+
+    .text {
+        justify-content: space-between;
+    }
+
+    span, .text {
+        font-weight: 700;
+    }
+
+    .outcast {
+        width: 9rem;
+        padding: .7rem 1rem;
+        border-radius: .5rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%); /* 0-0- */
+        font-size: .6rem;
+        font-weight: 700;
+        background-color: #fff;
+        color: hsl(229, 7%, 55%);
+
+        span {
+            color: hsl(229, 57%, 11%);
+            font-size: 2rem;
+            vertical-align: middle;
+            padding-right: .5rem;
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: 750px) {
+    main {
+        flex-direction: row;
+    }
+
+    .wrapper {
+        flex-direction: row;
+        margin-inline: auto;
+        max-width: 52rem;
+    
+        > * {
+            align-self: flex-end;
+        }
+    }
+
+    .about {
+        margin: 0;
+        margin-right: 2rem;
+    }
+
+    .storage {
+        max-width: 31rem;
+    
+
+        .outcast {
+            bottom: initial;
+            left: initial;
+            top: 0;
+            right: 2rem;
+            transform: translate(0%, -65%); /* 0-0- */
+        }
+    }
+}
